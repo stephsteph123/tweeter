@@ -1,0 +1,25 @@
+
+
+.pageHeader{
+  width: 100%;
+  height: 520px;
+  padding: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffe4c4;
+  background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
+}
+
+.profileSetUp{
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  Margin-block-start: 5px;
+}

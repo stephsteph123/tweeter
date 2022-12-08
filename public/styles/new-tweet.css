@@ -1,0 +1,43 @@
+.formContainer{
+  display: flex;
+  flex-direction:column;
+  font-family: 'Source Sans Pro';
+  font-size: medium
+
+}
+
+.hummingLine{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #353535;
+
+}
+
+#tweet-text{
+  background-color: #ecb65fe8;
+  border-top: #FFFFFF;
+  border-left: #FFFFFF;
+  border-right: #FFFFFF;
+  border-bottom-width: medium;
+}
+
+.buttonSubmit{
+  display: flex;
+  justify-items: left;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-family: 'Bungee', cursive;
+  Margin-block-start: 10px;
+}
+
+.counter{
+  display: flex;
+  align-self: flex-end;
+  justify-items: right;
+  font-family: 'Bungee', cursive;
+}
+
+.buttonPlusCounter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
