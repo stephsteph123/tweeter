@@ -1,15 +1,15 @@
+/* form content */
+
 .formContainer{
   display: flex;
   flex-direction:column;
   font-family: 'Source Sans Pro';
   font-size: medium
-
 }
 
 .hummingLine{
   font-family: 'Source Sans Pro', sans-serif;
   color: #353535;
-
 }
 
 #tweet-text{
@@ -41,3 +41,54 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+/* article */
+
+.tweetContainer{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.articleTweetHeader{
+  display: flex;
+  justify-content: space-between;
+  font-size: larger;
+}
+
+.userHandle{
+  display: flex;
+  align-self: flex-end;
+  color: #353535;
+  font-size: large;
+}
+
+
+.articleTweetFooter{
+  display: flex;
+  justify-content: space-between;
+  font-size: medium;
+}
+
+.rightLogos{
+  display: flex;
+  justify-content: flex-end;
+}
+
+#flagIMG:hover {
+  box-shadow: 0 0 11px rgba(,33,33,33); 
+}
+#repostIMG:hover {
+  box-shadow: 0 0 11px rgba(,33,33,33);
+}
+#heartIMG:hover {
+  box-shadow: 0 0 11px rgba(,33,33,33); 
+}
+
+.tweetDate{
+  display: flex;
+  color: #353535;
+  justify-self: flex-start;
+}
+
+
