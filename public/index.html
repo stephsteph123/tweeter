@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/131d058055.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" crossorigin="anonymous"></script>
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -53,26 +54,8 @@
               <output name="counter" class="counterCount" for="tweet-text">140</output>
             </div>
           </form>
-          <article class="tweetContainer">
-            <h2 class="articleTweetHeader">
-              <tag class="userNameIcon">
-              <i class="fa-solid fa-face-smile" id="userIcon"></i>
-              <tag class ="userName">userName </tag>
-            </tag>
-              <tag class ="userHandle">@userHandle </tag>
-            </h2>
-            <tag class ="tweetBody">tweetBody</tag>
-            <tag class ="borderLine">borderline </tag>
-            <footer class="articleTweetFooter">
-              <tag class="tweetDate">tweetDate</tag>
-              <span class="rightLogos">
-                <i class="fa-solid fa-flag" id="flagIMG"></i>
-                <i class="fa-solid fa-recycle" id="repostIMG"></i>
-                <i class="fa-solid fa-heart" id="heartIMG"></i>
-              </span>
-            </footer>
-          </article>
         </section>
+        <div id= "tweetContainer"> </div>
     </main>
   </body>
 </html>

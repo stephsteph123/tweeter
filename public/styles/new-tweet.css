@@ -76,19 +76,21 @@
 }
 
 #flagIMG:hover {
-  box-shadow: 0 0 11px rgba(,33,33,33); 
+  box-shadow: 0 0 11px rgba(33,33,33); 
 }
+
 #repostIMG:hover {
-  box-shadow: 0 0 11px rgba(,33,33,33);
+  box-shadow: 0 0 11px rgba(33,33,33);
 }
+
 #heartIMG:hover {
-  box-shadow: 0 0 11px rgba(,33,33,33); 
+  box-shadow: 0 0 11px rgba(33,33,33); 
 }
 
 .tweetDate{
   display: flex;
   color: #353535;
-  justify-self: flex-start;
+  /* justify-self: flex-start; */
 }
 
 
