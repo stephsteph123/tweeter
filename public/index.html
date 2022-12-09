@@ -17,9 +17,12 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script defer src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body class="body1">
@@ -42,17 +45,15 @@
     <main class="container">
         <section class="new-tweet">
           <h2>Compose Tweet</h2>
-          <form class="formContainer" method="post" action="tweets">
+          <form class="formContainer" method="post" action="/tweets">
             <label class="hummingLine" for="tweet-text">What are you humming about?</label>
             <textarea name="text" id="tweet-text"></textarea>
             <div class="buttonPlusCounter">
               <button class="buttonSubmit" type="submit">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text">140</output>
+              <output name="counter" class="counterCount" for="tweet-text">140</output>
             </div>
           </form>
           <article class="html">
-            <h1 class = "article.tweet header" href="#"> this is a header </h1>
-            <footer class = "article.tweet footer" href="#"> this is a footer </footer>
           </article>
         </section>
     </main>
