@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
   const createTweetElement = function (tweet) {
     return `<article class="tweetContainer">
   <h2 class="articleTweetHeader">
@@ -14,7 +13,7 @@
   </h2>
   <textarea wrap = "soft" class ="tweetBody">${escape(tweet.content.text)}</textarea>
   <footer class="articleTweetFooter">
-    <time class="tweetDate">${tweet.created_at}</time>
+    <time class="tweetDate">${timeSince(tweet.created_at)}</time>
     <span class="rightLogos">
       <i class="fa-solid fa-flag" id="flagIMG"></i>
       <i class="fa-solid fa-recycle" id="repostIMG"></i>
@@ -48,6 +47,19 @@
     return div.innerHTML;
   };
 
+  const timeSince = function (time) {
+    result = 0;
+    let oneDayMs = 1000*60*60*24
+    const dateTweet = new Date(time)
+    const dateNow = new Date(Date.now()) 
+    let diffDate = ((dateNow-dateTweet)/oneDayMs).toFixed(2)
+    if (diffDate < 1) {
+      result = (`${Math.round(diffDate)} hour(s) since last tweet`)
+    } else {
+      result = (`${Math.round(diffDate)} day(s) since last tweet`)
+    }
+    return result;
+  };
 
 $(document).ready(function(){
 
@@ -56,8 +68,9 @@ loadTweets();
 $(".formContainer").submit(function(event) {
   event.preventDefault();
   const missText = $("#tweet-text").val();
-  console.log("cleanText1")
   if (!missText) {
+    $('#mainLabel').slideDown();
+  } else if (missText >= "120") {
     $('#mainLabel').slideDown();
   } else {
     $("tweetContainer").empty()
@@ -67,7 +80,6 @@ $(".formContainer").submit(function(event) {
       data: $(".formContainer").serialize(),
     })
     .then(function(tweetsBody) {
-      console.log("success", tweetsBody)
       $('#mainLabel').hide();
       loadTweets();
     })

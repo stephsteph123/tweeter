@@ -19,6 +19,7 @@
   border-left: #FFFFFF;
   border-right: #FFFFFF;
   border-bottom-width: medium;
+  resize:none;
 }
 
 .tweetTextDiv{
@@ -64,6 +65,7 @@
   font-size: large;
   font-weight: 600;
   background-color: transparent;
+  resize:none;
 }
 
 .tweetContainer{
