@@ -46,9 +46,12 @@
     <main class="container">
         <section class="new-tweet">
           <h2>Compose Tweet</h2>
+          <p id="mainLabel">Something gone wrong... Contact with admin.</p>
           <form class="formContainer" method="post" action="/tweets">
             <label class="hummingLine" for="tweet-text">What are you humming about?</label>
+            <div class ="tweetTextDiv">
             <textarea name="text" id="tweet-text"></textarea>
+            </div>
             <div class="buttonPlusCounter">
               <button class="buttonSubmit" type="submit">Tweet</button>
               <output name="counter" class="counterCount" for="tweet-text">140</output>

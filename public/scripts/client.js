@@ -12,8 +12,7 @@
     <tag class ="userName">${tweet.user.name}</tag>
     <tag class ="userHandle">${tweet.user.handle}</tag>
   </h2>
-  
-  <tag class ="tweetBody">${tweet.content.text}</tag>
+  <tag class ="tweetBody">${escape(tweet.content.text)}</tag>
   <tag class ="borderLine">borderline </tag>
   <footer class="articleTweetFooter">
     <time class="tweetDate">${tweet.created_at}</time>
@@ -27,7 +26,7 @@
   }
 
   const renderTweets = function (tweets) {
-    $("tweetContainer").empty();
+    $("#tweetContainer").empty();
     for (let tweet of tweets) {
       $("#tweetContainer").prepend(createTweetElement(tweet))
     }
@@ -44,6 +43,13 @@
     });
     }
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+
 $(document).ready(function(){
 
 loadTweets();
@@ -51,9 +57,11 @@ loadTweets();
 $(".formContainer").submit(function(event) {
   event.preventDefault();
   const missText = $("#tweet-text").val();
+  console.log("cleanText1")
   if (!missText) {
-    alert("tweet cannot be empty");
+    $('#mainLabel').slideDown();
   } else {
+    $("tweetContainer").empty()
     $.ajax({  
       url: "/tweets", 
       method: "POST", 
@@ -61,6 +69,7 @@ $(".formContainer").submit(function(event) {
     })
     .then(function(tweetsBody) {
       console.log("success", tweetsBody)
+      $('#mainLabel').hide();
       loadTweets();
     })
     .catch((err) => {
@@ -70,13 +79,3 @@ $(".formContainer").submit(function(event) {
 })
 
 });
-
-
-
-
-//using AJAX to fetch from server
-//inside (docoument.ready), create funciton > laodtweets
-//fetch tweets from tweets page.
-//JSON inside HTML 
-//pass to renderTweets function (AJAX GET)
-//implement timego

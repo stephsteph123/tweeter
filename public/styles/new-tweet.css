@@ -13,7 +13,7 @@
 }
 
 #tweet-text{
-  background-color: #ecb65fe8;
+  /* background-color: #ecb65fe8; */
   border-top: #FFFFFF;
   border-left: #FFFFFF;
   border-right: #FFFFFF;
@@ -91,6 +91,19 @@
   display: flex;
   color: #353535;
   /* justify-self: flex-start; */
+}
+
+#mainLabel {
+  width: 300px;
+  height: 100px;
+  /* background: #A60000; */
+  color: #A60000;
+  text-align: center;
+  position: relative;
+  border: 1px dotted rgb(248, 6, 6);
+  /* left: calc( 50% - 150px ); */
+  z-index: 3;
+  display: none;
 }
 
 
