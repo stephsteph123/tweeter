@@ -8,10 +8,3 @@ $("#tweet-text").keyup(function() {
   }
   $('.counterCount').text(newCount);
 });
-
-$(".buttonSubmit").click(function() {
-  const missText = $("#tweet-text").val();
-  if (!missText) {
-    alert("tweet cannot be empty");
-  }
-});

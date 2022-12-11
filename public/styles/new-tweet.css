@@ -4,7 +4,7 @@
   display: flex;
   flex-direction:column;
   font-family: 'Source Sans Pro';
-  font-size: medium
+  font-size: medium;
 }
 
 .hummingLine{
@@ -13,11 +13,17 @@
 }
 
 #tweet-text{
-  /* background-color: #ecb65fe8; */
+  display: flex;
+  background-color: #ecb65fe8;
   border-top: #FFFFFF;
   border-left: #FFFFFF;
   border-right: #FFFFFF;
   border-bottom-width: medium;
+}
+
+.tweetTextDiv{
+  display: flex;
+  flex-direction:column;
 }
 
 .buttonSubmit{
@@ -44,23 +50,55 @@
 
 /* article */
 
+.tweetBody {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  contain: content;
+  margin-left: 1%;
+  border: groove rgba(7, 0, 0, 0.721);
+  border-top: #FFFFFF;
+  border-left: #FFFFFF;
+  border-right: #FFFFFF;
+  margin-bottom: 2%;
+  font-size: medium;
+}
+
 .tweetContainer{
   display: flex;
   flex-direction: column;
+  border: groove rgb(7, 0, 0);
+  margin-top: 2%;
+}
 
+.tweetContainer:hover{
+-webkit-box-shadow: 0 10px 6px -6px #777;
+-moz-box-shadow: 0 10px 6px -6px #777;
+     box-shadow: 0 10px 6px -6px #777;
 }
 
 .articleTweetHeader{
   display: flex;
   justify-content: space-between;
-  font-size: larger;
+  font-size: medium;
 }
 
 .userHandle{
   display: flex;
-  align-self: flex-end;
   color: #353535;
   font-size: large;
+  margin-inline-start: auto;
+  margin-right: 1%;
+}
+
+.userIcon {
+  margin-left: 1%;
+}
+
+.userName {
+  margin-right: auto;
+  margin-left: 2%;
+  justify-self: flex-start;
 }
 
 
@@ -68,41 +106,55 @@
   display: flex;
   justify-content: space-between;
   font-size: medium;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 1%;
 }
 
 .rightLogos{
   display: flex;
   justify-content: flex-end;
+  color: #4056A1;
+}
+
+#flagIMG{
+  margin-right: 10%;
+}
+#repostIMG{
+  margin-right: 10%;
+}
+#heartIMG{
+  margin-right: 2%;
 }
 
 #flagIMG:hover {
-  box-shadow: 0 0 11px rgba(33,33,33); 
+  text-shadow: 1px 1px 2px black;
 }
 
 #repostIMG:hover {
-  box-shadow: 0 0 11px rgba(33,33,33);
+  text-shadow: 1px 1px 2px black;
+  forced-color-adjust: ;
 }
 
 #heartIMG:hover {
-  box-shadow: 0 0 11px rgba(33,33,33); 
+  text-shadow: 1px 1px 2px black;
 }
 
 .tweetDate{
   display: flex;
   color: #353535;
-  /* justify-self: flex-start; */
 }
 
 #mainLabel {
-  width: 300px;
-  height: 100px;
-  /* background: #A60000; */
-  color: #A60000;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  margin-left: 5%;
+  height: 40px;
+  color: rgb(201, 5, 5);
   text-align: center;
   position: relative;
-  border: 1px dotted rgb(248, 6, 6);
-  /* left: calc( 50% - 150px ); */
-  z-index: 3;
+  border: 2px groove rgb(248, 6, 6);
   display: none;
 }
 

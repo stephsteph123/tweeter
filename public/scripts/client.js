@@ -13,7 +13,6 @@
     <tag class ="userHandle">${tweet.user.handle}</tag>
   </h2>
   <tag class ="tweetBody">${escape(tweet.content.text)}</tag>
-  <tag class ="borderLine">borderline </tag>
   <footer class="articleTweetFooter">
     <time class="tweetDate">${tweet.created_at}</time>
     <span class="rightLogos">
