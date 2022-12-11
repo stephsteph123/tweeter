@@ -16,8 +16,6 @@
 }
 
 .username {
-  display: flex;
-  flex-direction: column;
   align-self: center;
   Margin-block-start: 5px;
 }
