@@ -12,7 +12,7 @@
     <tag class ="userName">${tweet.user.name}</tag>
     <tag class ="userHandle">${tweet.user.handle}</tag>
   </h2>
-  <tag class ="tweetBody">${escape(tweet.content.text)}</tag>
+  <textarea wrap = "soft" class ="tweetBody">${escape(tweet.content.text)}</textarea>
   <footer class="articleTweetFooter">
     <time class="tweetDate">${tweet.created_at}</time>
     <span class="rightLogos">

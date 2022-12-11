@@ -14,7 +14,7 @@
 
 #tweet-text{
   display: flex;
-  background-color: #ecb65fe8;
+  background-color: transparent;
   border-top: #FFFFFF;
   border-left: #FFFFFF;
   border-right: #FFFFFF;
@@ -60,8 +60,10 @@
   border-top: #FFFFFF;
   border-left: #FFFFFF;
   border-right: #FFFFFF;
-  margin-bottom: 2%;
-  font-size: medium;
+  margin-bottom: 1%;
+  font-size: large;
+  font-weight: 600;
+  background-color: transparent;
 }
 
 .tweetContainer{
@@ -129,15 +131,17 @@
 
 #flagIMG:hover {
   text-shadow: 1px 1px 2px black;
+  color:plum;
 }
 
 #repostIMG:hover {
   text-shadow: 1px 1px 2px black;
-  forced-color-adjust: ;
+  color:plum;
 }
 
 #heartIMG:hover {
   text-shadow: 1px 1px 2px black;
+  color:plum;
 }
 
 .tweetDate{

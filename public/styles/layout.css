@@ -20,14 +20,13 @@ html {
   display: flex;
   flex-direction: column;
   align-self: center;
-  background-color: #ecb65fe8;
   width: 90%;
  }
 
 .body1{
   display: flex;
   flex-direction: column;
-  background-color: #ecb65fe8;
+  background-color:bisque;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   font-style: normal;

@@ -32,7 +32,7 @@
         <span class= "title">tweeter</span>
       <div class="rightNav">
         <a class="tweetText"> Write a new tweet</a>
-        <i class="fa-solid fa-angles-down" id = "arrowDown"></i>
+        <i class="fa-solid fa-angles-down fa-bounce" id = "arrowDown" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;" ></i>
       </div>
     </nav>
     <header class ="pageHeader">
@@ -50,7 +50,7 @@
           <form class="formContainer" method="post" action="/tweets">
             <label class="hummingLine" for="tweet-text">What are you humming about?</label>
             <div class ="tweetTextDiv">
-            <textarea name="text" id="tweet-text"></textarea>
+            <textarea wrap="soft" name="text" id="tweet-text"></textarea>
             </div>
             <div class="buttonPlusCounter">
               <button class="buttonSubmit" type="submit">Tweet</button>
