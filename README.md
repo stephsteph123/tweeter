@@ -11,6 +11,12 @@ Tweeter is a simple, single-page Twitter clone. It leverages jQuery, HTML5, Java
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+## Screenshots
+!["Screenshot of Compose Tweet."](https://github.com/stephsteph123/tweeter/blob/master/docs/composeTweet.png)
+!["Screenshot of the Navigation Bar and Header."](https://github.com/stephsteph123/tweeter/blob/master/docs/navBarAndHeader.png)
+!["Screenshot of user writing a tweet."](https://github.com/stephsteph123/tweeter/blob/master/docs/composeTweetExample.png)
+!["Screenshot of the output of a composed tweet."](https://github.com/stephsteph123/tweeter/blob/master/docs/composeTweetOutput.png)
+
 ## Dependencies
 
 - Express
