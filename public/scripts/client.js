@@ -70,7 +70,7 @@ $(".formContainer").submit(function(event) {
   const missText = $("#tweet-text").val();
   if (!missText) {
     $('#mainLabel').slideDown();
-  } else if (missText >= 120) {
+  } else if (missText.length > 140) {
     $('#mainLabel').slideDown();
   } else {
     $("tweetContainer").empty()
