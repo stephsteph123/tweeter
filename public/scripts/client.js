@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+//function that houses the standard tweet structure
   const createTweetElement = function (tweet) {
     return `<article class="tweetContainer">
   <h2 class="articleTweetHeader">
@@ -23,6 +24,8 @@
   </article>`
   }
 
+
+//function allows new tweets to go to the top of the container.
   const renderTweets = function (tweets) {
     $("#tweetContainer").empty();
     for (let tweet of tweets) {
@@ -30,6 +33,7 @@
     }
   }
 
+//loads all the tweets
   const loadTweets = function () {
     $.ajax({  url: "http://localhost:8080/tweets", method: "GET" })
     .then(function(tweetsBody) {
@@ -47,6 +51,7 @@
     return div.innerHTML;
   };
 
+//calculates the time since tweet to current time. 
   const timeSince = function (time) {
     result = 0;
     let oneDayMs = 1000*60*60*24
@@ -65,6 +70,7 @@ $(document).ready(function(){
 
 loadTweets();
 
+//submit event upon clicking the button.
 $(".formContainer").submit(function(event) {
   event.preventDefault();
   const missText = $("#tweet-text").val();

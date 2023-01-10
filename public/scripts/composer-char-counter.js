@@ -1,10 +1,11 @@
-
-$("#tweet-text").keyup(function() {
+// function that updates the character counter based off of length. Updates colour too. 
+$(document).ready(function() {
+$("#tweet-text").on('input',function() {
   const maxLength = 140;
   let colour;
   const inputCount = $("#tweet-text").val().length;
-  let newCount = maxLength-inputCount
-  if (newCount <= 20) {
+  let newCount = maxLength-inputCount;
+    if (newCount <= 20) {
     $('.counterCount').css({
       'color': 'red'
   })
@@ -14,4 +15,5 @@ $("#tweet-text").keyup(function() {
   })
 }
   $('.counterCount').text(newCount);
+});
 });
