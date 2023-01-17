@@ -5,7 +5,7 @@ $("#tweet-text").on('input',function() {
   let colour;
   const inputCount = $("#tweet-text").val().length;
   let newCount = maxLength-inputCount;
-    if (newCount <= 20) {
+    if (newCount < 0 ) {
     $('.counterCount').css({
       'color': 'red'
   })

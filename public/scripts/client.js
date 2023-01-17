@@ -37,7 +37,6 @@
   const loadTweets = function () {
     $.ajax({  url: "http://localhost:8080/tweets", method: "GET" })
     .then(function(tweetsBody) {
-      console.log("success", tweetsBody)
       renderTweets(tweetsBody)
     })
     .catch((err) => {
@@ -52,19 +51,9 @@
   };
 
 //calculates the time since tweet to current time. 
-  const timeSince = function (time) {
-    result = 0;
-    let oneDayMs = 1000*60*60*24
-    const dateTweet = new Date(time)
-    const dateNow = new Date(Date.now()) 
-    let diffDate = ((dateNow-dateTweet)/oneDayMs).toFixed(2)
-    if (diffDate < 1) {
-      result = (`${Math.round(diffDate)} hour(s) since last tweet`)
-    } else {
-      result = (`${Math.round(diffDate)} day(s) since last tweet`)
-    }
-    return result;
-  };
+  const timeSince = function(time) {
+    return timeago.format(time);
+  }
 
 $(document).ready(function(){
 
@@ -86,6 +75,8 @@ $(".formContainer").submit(function(event) {
       data: $(".formContainer").serialize(),
     })
     .then(function(tweetsBody) {
+      $("#tweet-text").val('')
+      $(".counterCount").val(140)
       $('#mainLabel').hide();
       loadTweets();
     })
